@@ -11,11 +11,13 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid="MOD", name="Mod", version="1.0.0")
+
+
+@Mod(modid="EarthsCore", name="Mod", version="1.0.0")
 @NetworkMod(clientSideRequired=true)
 public class Main {
 
-
+	String ModID = "EarthsCore";
         @Instance(value = "DynamicID")
         public static Main instance;
         
