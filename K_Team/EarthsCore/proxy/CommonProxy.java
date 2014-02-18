@@ -1,4 +1,4 @@
-package K_Team.EarthCore.proxy;
+package K_Team.EarthsCore.proxy;
 
 public class CommonProxy {
 

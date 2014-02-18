@@ -1,6 +1,6 @@
-package K_Team.EarthCore;
+package K_Team.EarthsCore;
 
-import K_Team.EarthCore.proxy.CommonProxy;
+import K_Team.EarthsCore.proxy.CommonProxy;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
