@@ -6,6 +6,8 @@
 *.ear
 
 *.cfg
+*.lang
+*.lzma
 
 /cpw
 /ibxm
