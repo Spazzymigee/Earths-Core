@@ -1,6 +1,9 @@
 package K_Team.EarthsCore;
 
 import K_Team.EarthsCore.proxy.CommonProxy;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -24,13 +27,16 @@ public class Main {
         @SidedProxy(clientSide="K_Team.EarthsCore.proxy.ClientProxy", serverSide="K_Team.EarthsCore.proxy.CommonProxy")
         public static CommonProxy proxy;
 
+        int scandiumOreID;
         
-        //this
+        public static Block scandiumOre;
+        
         @EventHandler
         public void preInit(FMLPreInitializationEvent event) {
         	Configuration config = new Configuration(event.getSuggestedConfigurationFile());
             config.load();
             boolean doesOresGenerate = config.get(Configuration.CATEGORY_GENERAL, "Do Mod-ores Generate?", true).getBoolean(true);
+            int scandiumOreID = config.getBlock("Scandium Ore", 7620).getInt();
 
             config.save();
         }
@@ -38,6 +44,8 @@ public class Main {
         @EventHandler
         public void load(FMLInitializationEvent event) {
                 proxy.registerRenderers();
+                
+                scandiumOre = new ores(scandiumOreID).setHardness(0.5F).setStepSound(Block.soundGravelFootstep).setUnlocalizedName("genericDirt").setCreativeTab(CreativeTabs.tabBlock);
 
         }
         
@@ -47,4 +55,5 @@ public class Main {
 
 
         public boolean doesOresGenerate;
+
 }
