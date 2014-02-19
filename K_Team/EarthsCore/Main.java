@@ -12,7 +12,6 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
 
-
 @Mod(modid="EarthsCore", name="Earths Core", version="1.0.0")
 @NetworkMod(clientSideRequired=true)
 public class Main {
