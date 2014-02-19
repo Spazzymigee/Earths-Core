@@ -12,6 +12,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import net.minecraftforge.common.Configuration;
 
+//hi
 
 @Mod(modid="EarthsCore", name="Earths Core", version="1.0.0")
 @NetworkMod(clientSideRequired=true)
@@ -44,5 +45,14 @@ public class Main {
         @EventHandler
         public void postInit(FMLPostInitializationEvent event) {
         }
+<<<<<<< HEAD
         public boolean doesOresGenerate;
 }
+=======
+
+        public boolean doesOresGenerate;
+}
+
+
+
+>>>>>>> branch 'master' of https://github.com/Spazzymigee/Earths-Core.git
