@@ -25,7 +25,7 @@ public class Main {
         public static CommonProxy proxy;
 
         
-        
+        //this
         @EventHandler
         public void preInit(FMLPreInitializationEvent event) {
         	Configuration config = new Configuration(event.getSuggestedConfigurationFile());
