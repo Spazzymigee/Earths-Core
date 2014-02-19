@@ -36,7 +36,8 @@ public class Main {
         	Configuration config = new Configuration(event.getSuggestedConfigurationFile());
             config.load();
             boolean doesOresGenerate = config.get(Configuration.CATEGORY_GENERAL, "Do Mod-ores Generate?", true).getBoolean(true);
-            int scandiumOreID = config.getBlock("Scandium Ore", 7620).getInt();
+            
+            int scandiumOreID = config.getBlock("Scandium Ore", 2620).getInt();
 
             config.save();
         }
@@ -45,7 +46,7 @@ public class Main {
         public void load(FMLInitializationEvent event) {
                 proxy.registerRenderers();
                 
-                scandiumOre = new BlockOres(scandiumOreID).setHardness(0.5F).setStepSound(Block.soundGravelFootstep).setUnlocalizedName("genericDirt").setCreativeTab(CreativeTabs.tabBlock);
+                scandiumOre = new BlockOres(scandiumOreID).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("scandiumOre").setCreativeTab(CreativeTabs.tabBlock);
 
         }
         
