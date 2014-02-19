@@ -11,19 +11,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import net.minecraftforge.common.Configuration;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> branch 'master' of https://github.com/Spazzymigee/Earths-Core.git
 import net.minecraftforge.common.Configuration;
-
-<<<<<<< HEAD
->>>>>>> branch 'master' of https://github.com/Spazzymigee/Earths-Core.git
-=======
->>>>>>> branch 'master' of https://github.com/Spazzymigee/Earths-Core.git
-//hi
 
 @Mod(modid="EarthsCore", name="Earths Core", version="1.0.0")
 @NetworkMod(clientSideRequired=true)
@@ -56,32 +44,7 @@ public class Main {
         @EventHandler
         public void postInit(FMLPostInitializationEvent event) {
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        public boolean doesOresGenerate;
-}
-=======
+
 
         public boolean doesOresGenerate;
 }
-
-
-
->>>>>>> branch 'master' of https://github.com/Spazzymigee/Earths-Core.git
-=======
-
-        public boolean doesOresGenerate;
-}
-
-
-
->>>>>>> branch 'master' of https://github.com/Spazzymigee/Earths-Core.git
-=======
-
-        public boolean doesOresGenerate;
-}
-
-
-
->>>>>>> branch 'master' of https://github.com/Spazzymigee/Earths-Core.git
