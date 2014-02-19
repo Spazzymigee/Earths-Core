@@ -13,8 +13,11 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.Configuration;
+import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid="EarthsCore", name="Earths Core", version="1.0.0")
 @NetworkMod(clientSideRequired=true)
@@ -33,11 +36,16 @@ public class Main {
         
         @EventHandler
         public void preInit(FMLPreInitializationEvent event) {
+        	
         	Configuration config = new Configuration(event.getSuggestedConfigurationFile());
+        	
             config.load();
+            
             boolean doesOresGenerate = config.get(Configuration.CATEGORY_GENERAL, "Do Mod-ores Generate?", true).getBoolean(true);
             
             int scandiumOreID = config.getBlock("Scandium Ore", 2620).getInt();
+            
+            //int randomItemID = config.getItem("RandomItem", 20000).getInt();
 
             config.save();
         }
@@ -46,7 +54,13 @@ public class Main {
         public void load(FMLInitializationEvent event) {
                 proxy.registerRenderers();
                 
-                scandiumOre = new BlockOres(scandiumOreID).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("scandiumOre").setCreativeTab(CreativeTabs.tabBlock);
+                scandiumOre =(new BlockOres(scandiumOreID, Material.rock)).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("scandiumOre").setCreativeTab(CreativeTabs.tabBlock);
+                
+                GameRegistry.registerBlock(scandiumOre);
+                
+                LanguageRegistry.addName(scandiumOre, "Scandium Ore");
+                
+                MinecraftForge.setBlockHarvestLevel(scandiumOre, "pickaxe", 2);
 
         }
         

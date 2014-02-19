@@ -6,9 +6,9 @@ import net.minecraft.block.material.Material;
 public class BlockOres extends Block 
 {
 
-        public BlockOres(int blockID)
+        public BlockOres(int blockID, Material material)
         {
-            super(blockID, Material.rock);
+            super(blockID, material);
         }
 }
 
