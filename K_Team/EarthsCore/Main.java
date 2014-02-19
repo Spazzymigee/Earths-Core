@@ -45,7 +45,7 @@ public class Main {
         public void load(FMLInitializationEvent event) {
                 proxy.registerRenderers();
                 
-                scandiumOre = new ores(scandiumOreID).setHardness(0.5F).setStepSound(Block.soundGravelFootstep).setUnlocalizedName("genericDirt").setCreativeTab(CreativeTabs.tabBlock);
+                scandiumOre = new BlockOres(scandiumOreID).setHardness(0.5F).setStepSound(Block.soundGravelFootstep).setUnlocalizedName("genericDirt").setCreativeTab(CreativeTabs.tabBlock);
 
         }
         
