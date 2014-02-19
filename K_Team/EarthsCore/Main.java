@@ -10,6 +10,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import net.minecraftforge.common.Configuration;
 
 
 @Mod(modid="EarthsCore", name="Earths Core", version="1.0.0")
@@ -22,19 +23,26 @@ public class Main {
         
         @SidedProxy(clientSide="K_Team.EarthsCore.proxy.ClientProxy", serverSide="K_Team.EarthsCore.proxy.CommonProxy")
         public static CommonProxy proxy;
-        
+
         
         
         @EventHandler
         public void preInit(FMLPreInitializationEvent event) {
+        	Configuration config = new Configuration(event.getSuggestedConfigurationFile());
+            config.load();
+            boolean doesOresGenerate = config.get(Configuration.CATEGORY_GENERAL, "Do Mod-ores Generate?", true).getBoolean(true);
+
+            config.save();
         }
         
         @EventHandler
         public void load(FMLInitializationEvent event) {
                 proxy.registerRenderers();
+
         }
         
         @EventHandler
         public void postInit(FMLPostInitializationEvent event) {
         }
+        public boolean doesOresGenerate;
 }
