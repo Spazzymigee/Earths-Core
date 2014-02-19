@@ -13,16 +13,15 @@ import cpw.mods.fml.common.network.NetworkMod;
 
 
 
-@Mod(modid="EarthsCore", name="Mod", version="1.0.0")
+@Mod(modid="EarthsCore", name="Earths Core", version="1.0.0")
 @NetworkMod(clientSideRequired=true)
 public class Main {
 
-	String ModID = "EarthsCore";
-        @Instance(value = "DynamicID")
+        @Instance(value = "EarthsCore")
         public static Main instance;
         
         
-        @SidedProxy(clientSide="net.K_Team.mod.proxy.ClientProxy", serverSide="net.K_Team.mod.proxy.CommonProxy")
+        @SidedProxy(clientSide="K_Team.EarthsCore.proxy.ClientProxy", serverSide="K_Team.EarthsCore.proxy.CommonProxy")
         public static CommonProxy proxy;
         
         
