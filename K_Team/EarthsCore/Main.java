@@ -13,9 +13,15 @@ import cpw.mods.fml.common.network.NetworkMod;
 import net.minecraftforge.common.Configuration;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> branch 'master' of https://github.com/Spazzymigee/Earths-Core.git
 import net.minecraftforge.common.Configuration;
 
+<<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/Spazzymigee/Earths-Core.git
+=======
 >>>>>>> branch 'master' of https://github.com/Spazzymigee/Earths-Core.git
 //hi
 
@@ -52,8 +58,17 @@ public class Main {
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         public boolean doesOresGenerate;
 }
+=======
+
+        public boolean doesOresGenerate;
+}
+
+
+
+>>>>>>> branch 'master' of https://github.com/Spazzymigee/Earths-Core.git
 =======
 
         public boolean doesOresGenerate;
